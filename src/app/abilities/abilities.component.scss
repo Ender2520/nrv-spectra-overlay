@@ -13,16 +13,11 @@
   flex: auto;
   align-items: center;
   justify-content: center;
-  gap: 15px;
-
-  &.right {
-    @extend .regular-container;
-    transform: rotateY(180deg);
-  }
+  gap: 22px;
 }
 
 .ability-icon {
-  width: 22px;
+  width: 24px;
 
   &.available {
     @extend .ability-icon;
@@ -31,20 +26,6 @@
 
   &.unavailable {
     @extend .ability-icon;
-    filter: brightness(0.35);
-  }
-}
-
-.ultimate-icon {
-  width: 30px;
-
-  &.available {
-    @extend .ultimate-icon;
-    filter: brightness(1);
-  }
-
-  &.unavailable {
-    @extend .ultimate-icon;
-    filter: brightness(0.35);
+    filter: brightness(0.4);
   }
 }

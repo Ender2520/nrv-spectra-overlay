@@ -51,6 +51,7 @@ Inside `config` folder, create a file named `config.json` with the following con
   "attackerColorShieldCurrency": "#ff838f",
   "defenderColorPrimary": "#25ac79",
   "defenderColorSecondary": "#61eab6",
+  "defenderColorTertiary": "#61eab6",
   "defenderColorShieldCurrency": "#61eab6"
 }
 ```
@@ -64,3 +65,5 @@ After that you can start the frontend by running `docker compose up -d` and the 
 # DISCLAIMER
 
 Spectra-Client isn't endorsed by Riot Games and doesn't reflect the views or opinions of Riot Games or anyone officially involved in producing or managing Riot Games properties. Riot Games, and all associated properties are trademarks or registered trademarks of Riot Games, Inc.
+
+TESTING FIXED GIT/GITHUB

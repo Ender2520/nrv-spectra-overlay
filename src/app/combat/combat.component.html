@@ -1,5 +1,5 @@
 <!-- Loading non-minimal versions of playercard component-->
-<div class="frame-2" *ngIf="!isMinimal()">
+<div class="frame-2">
   <div class="playercards-leftteam">
     <app-playercard
       *ngFor="let player of match.teams[0].players; trackBy: trackByPlayerId"
@@ -8,9 +8,10 @@
       [color]="match.teams[0].isAttacking ? 'attacker' : 'defender'"
       [hideAuxiliary]="hideAuxiliary"
       side="left"
+      class="app-playercard"
     />
   </div>
-  <div class="playercards">
+  <div class="playercards-rightteam">
     <app-playercard
       *ngFor="let player of match.teams[1].players; trackBy: trackByPlayerId"
       [match]="match"
@@ -18,12 +19,13 @@
       [color]="match.teams[1].isAttacking ? 'attacker' : 'defender'"
       [hideAuxiliary]="hideAuxiliary"
       side="right"
+      class="app-playercard"
     />
   </div>
 </div>
 
-<!-- Loading minimal versions of playercard component-->
-<div class="frame-2" *ngIf="isMinimal()">
+<!-- Loading minimal versions of playercard component
+<div class="frame-2">
   <div class="playercards-leftteam">
     <app-playercard-minimal
       *ngFor="let player of match.teams[0].players; trackBy: trackByPlayerId"
@@ -33,7 +35,7 @@
       side="left"
     />
   </div>
-  <div class="playercards">
+  <div class="playercards-rightteam">
     <app-playercard-minimal
       *ngFor="let player of match.teams[1].players; trackBy: trackByPlayerId"
       [match]="match"
@@ -42,4 +44,4 @@
       side="right"
     />
   </div>
-</div>
+</div>-->

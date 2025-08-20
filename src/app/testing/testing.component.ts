@@ -135,8 +135,8 @@ export class TestingComponent implements AfterViewInit {
           ],
         },
         seedingInfo: {
-          left: "Group A",
-          right: "Group B",
+          left: "#2 (7-2)",
+          right: "#4 (5-4)",
         },
         tournamentInfo: {
           name: "",
@@ -156,7 +156,6 @@ export class TestingComponent implements AfterViewInit {
         this.team1.addPlayer();
         this.team2.addPlayer();
       }
-
       this.roundPhase = this.matchData.roundPhase;
       this.translate.use(this.lang);
     }
