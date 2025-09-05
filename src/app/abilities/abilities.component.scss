@@ -1,19 +1,19 @@
 .container {
   width: 100%;
   display: inline-flex;
-  flex-direction: column;
+  flex-direction: row;
   align-items: center;
   justify-content: center;
   gap: 2px;
 }
 
-.regular-container {
+.ability-container {
   display: inline-flex;
   flex-direction: row;
   flex: auto;
   align-items: center;
   justify-content: center;
-  gap: 22px;
+  gap: 20px;
 }
 
 .ability-icon {
