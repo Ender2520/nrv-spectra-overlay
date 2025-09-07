@@ -56,6 +56,9 @@ export class PlayerControllerComponent implements OnDestroy {
 
   playerObject = {
     name: "Test",
+    tagline: "DEBUG",
+    searchName: "Test #DEBUG",
+    fullName: "Test#DEBUG",
     playerId: 0,
     isAlive: true,
     agentInternal: "Wushu",
@@ -102,10 +105,16 @@ export class PlayerControllerComponent implements OnDestroy {
       PlayerControllerComponent.agentOrder[this.teamId][
         PlayerControllerComponent.agentIndex[this.teamId]++
       ];
+    this.playerObject.isObserved =
+      this.teamId === 0 && PlayerControllerComponent.playerNameIndex[this.teamId] === 0
+        ? true
+        : false;
     this.playerObject.name =
       PlayerControllerComponent.playerNameOrder[this.teamId][
         PlayerControllerComponent.playerNameIndex[this.teamId]++
       ];
+    this.playerObject.searchName = `${this.playerObject.name} #${this.playerObject.tagline}`;
+    this.playerObject.fullName = `${this.playerObject.name}#${this.playerObject.tagline}`;
     return this.playerObject;
   }
 

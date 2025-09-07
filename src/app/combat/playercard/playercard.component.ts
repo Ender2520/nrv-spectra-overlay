@@ -6,6 +6,7 @@ import { NgIf, NgFor, NgClass } from "@angular/common";
 import { AbilitiesComponent } from "../../abilities/abilities.component";
 import { ShieldIconComponent } from "./shield-icon/shield-icon.component";
 import { TranslateModule } from "@ngx-translate/core";
+import { NameoverridePipe } from "../../pipes/nameoverride.pipe";
 
 const componentAnimations = [
   trigger("deathAnimation", [
@@ -51,7 +52,7 @@ const componentAnimations = [
   templateUrl: "./playercard.component.html",
   styleUrls: ["./playercard.component.scss"],
   animations: componentAnimations,
-  imports: [NgIf, AbilitiesComponent, ShieldIconComponent, NgFor, NgClass],
+  imports: [NgIf, AbilitiesComponent, ShieldIconComponent, NgFor, NgClass, NameoverridePipe],
 })
 export class InhouseTrackerPlayercardComponent {
   private config = inject(Config);
@@ -104,6 +105,14 @@ export class InhouseTrackerPlayercardComponent {
   clamp(value: number, min: number, max: number): number {
     return Math.min(Math.max(value, min), max);
   }
+
+  getOverrideNames(): Map<string, string> {
+    let toReturn = this.match?.tools?.nameOverrides?.overrides;
+    if (!toReturn) {
+      toReturn = new Map<string, string>();
+    }
+    return toReturn;
+  }
 }
 
 @Component({
@@ -111,6 +120,6 @@ export class InhouseTrackerPlayercardComponent {
   templateUrl: "./playercard-minimal.component.html",
   styleUrls: ["./playercard.component.scss"],
   animations: componentAnimations,
-  imports: [TranslateModule],
+  imports: [TranslateModule, NgIf, NameoverridePipe],
 })
 export class InhouseTrackerPlayercardMinimalComponent extends InhouseTrackerPlayercardComponent {}

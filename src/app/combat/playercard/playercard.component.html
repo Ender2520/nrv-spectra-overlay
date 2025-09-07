@@ -97,8 +97,23 @@
           </div>
         </div>
         <div class="username-container">
-          <div class="username-title" [class]="side">{{ player.name }}</div>
-    </div>
+          <div class="username-title" [class]="side">
+            {{ player.fullName | nameOverride: player.name : getOverrideNames() }}
+          </div>
+          <img
+            class="captain-icon"
+            *ngIf="player.isCaptain"
+            src="{{ assets }}/misc/TeamCaptain.svg"
+          />
+        </div>
+      </div>
+      <div
+        class="health-bar"
+        [class]="color"
+        [style.width.%]="clamp(player.health * 0.88 + 12, 0, 100)"
+        [@deathAnimation]="player.isAlive"
+        *ngIf="player.isAlive"
+      ></div>
     </div>
     <div
       class="utility-container"

@@ -149,6 +149,17 @@ export class TestingComponent implements AfterViewInit {
           customTextEnabled: false,
           customText: "This is a tournament",
         },
+        playercamsInfo: {
+          enable: true,
+          identifier: "SPPCDEBUG",
+          enabledPlayers: ["VoodooOne#DEBUG", "AlpacaHoarder#DEBUG"],
+        },
+        nameOverrides: {
+          overrides: new Map<string, string>([
+            ["VoodooOne#DEBUG", "Voodoo One"],
+            ["AlpacaHoarder#DEBUG", "AlpacaHoarder"],
+          ]),
+        },
       };
       this.team2.swapColor();
       this.trackerComponent.updateMatch(this.matchData);
@@ -158,6 +169,7 @@ export class TestingComponent implements AfterViewInit {
       }
       this.roundPhase = this.matchData.roundPhase;
       this.translate.use(this.lang);
+      this.changeRoundPhase();
     }
   }
 
@@ -167,7 +179,7 @@ export class TestingComponent implements AfterViewInit {
     } else if (this.matchData.roundPhase == "combat") {
       this.matchData.roundPhase = "end";
     } else if (this.matchData.roundPhase == "LOBBY") {
-      this.matchData.roundPhase = "end";
+      this.matchData.roundPhase = "combat";
     } else {
       this.matchData.roundPhase = "shopping";
     }
