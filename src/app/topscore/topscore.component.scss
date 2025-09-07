@@ -76,6 +76,7 @@
   position: absolute;
   height: 125%;
   z-index: 0;
+  filter: brightness(0.75);
   &-left {
     @extend .team-image;
     left: -5px;
@@ -84,7 +85,6 @@
     @extend .team-image;
     right: -5px;
   }
-  filter: brightness(0.75)
 }
 
 .teamname-container {
@@ -128,6 +128,7 @@
   position: relative;
   align-self: stretch;
   width: 3.62px;
+  z-index: 1;
   &.defender {
     @extend .divider;
     background-color: var(--defender-color-secondary);
@@ -136,7 +137,6 @@
     @extend .divider;
     background-color: var(--attacker-color-secondary);
   }
-  z-index: 1;
 }
 
 .scoreblock {
