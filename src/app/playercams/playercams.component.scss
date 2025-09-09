@@ -7,10 +7,10 @@
     background:
       linear-gradient(
         0deg,
-        rgba(var(--defender-color-rgb), 0.5) 0%,
+        rgba(var(--defender-color-rgb), 0.25) 0%,
         rgba(var(--defender-color-rgb), 0) 100%
       ),
-      rgba(15, 25, 35, 0);
+      rgba(25, 25, 25, 0);
   }
 
   &.attacker {
@@ -18,9 +18,9 @@
     background:
       linear-gradient(
         0deg,
-        rgba(var(--attacker-color-rgb), 0.7) 0%,
+        rgba(var(--attacker-color-rgb), 0.35) 0%,
         rgba(var(--attacker-color-rgb), 0) 100%
       ),
-      rgba(15, 25, 35, 0);
+      rgba(25, 25, 25, 0);
   }
 }
