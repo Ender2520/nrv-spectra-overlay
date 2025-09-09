@@ -290,14 +290,14 @@
 
 .money-text {
   letter-spacing: 0;
-  opacity: 0.8;
+  opacity: 1;
   font-family: "Montserrat", Helvetica;
   font-weight: 700;
   font-size: 18px;
 
   &-red {
     @extend .money-text;
-    color: #ff4558;
+    color: #ff4659;
   }
 
   &-white {
