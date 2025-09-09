@@ -135,8 +135,8 @@ export class TestingComponent implements AfterViewInit {
           ],
         },
         seedingInfo: {
-          left: "#2 (7-2)",
-          right: "#4 (5-4)",
+          left: "Group A",
+          right: "Group B",
         },
         tournamentInfo: {
           name: "",

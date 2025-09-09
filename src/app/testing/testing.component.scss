@@ -28,7 +28,7 @@
 
 .teamControllerContainer {
   position: absolute;
-  top: 5%;
+  top: 47%;
   left: 5%;
   width: 90%;
   display: flex;
@@ -36,7 +36,7 @@
   justify-content: space-between;
   &.shop {
     @extend .teamControllerContainer;
-    top: 5%;
+    top: 48%;
     left: 7%;
     width: 86%;
   }
@@ -44,7 +44,7 @@
 
 .matchControlsSpace {
   position: absolute;
-  top: 75%;
+  top: 25%;
   left: 25%;
   width: 50%;
   justify-content: center;
