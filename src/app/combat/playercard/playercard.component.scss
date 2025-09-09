@@ -74,20 +74,22 @@
 
   &.attacker {
     @extend .utility-container;
-    background: linear-gradient(
-      90deg,
-      rgba(25, 25, 25, 0.8) 0%,
-      rgba(0, 0, 0, 0.8) 100%
-    );
+    background: 
+    linear-gradient(
+        90deg,
+        rgba(0, 0, 0, 0.8) 0%,
+        rgba(0, 0, 0, 0.4) 100%,
+      );
   }
 
   &.defender {
     @extend .utility-container;
-    background: linear-gradient(
-      90deg,
-      rgba(25, 25, 25, 0.8) 0%,
-      rgba(0, 0, 0, 0.8) 100%
-    );
+    background: 
+    linear-gradient(
+        90deg,
+        rgba(0, 0, 0, 0.8) 0%,
+        rgba(0, 0, 0, 0.4) 100%,
+      );
   }
 
   &.minimal {
@@ -334,7 +336,7 @@
         rgba(var(--defender-color-rgb), 0.25) 0%,
         rgba(var(--defender-color-rgb), 0) 100%
       ),
-      rgba(25, 25, 25, 0.8);
+      rgba(0, 0, 0, 0.8);
   }
 
   &.attacker {
@@ -345,18 +347,18 @@
         rgba(var(--attacker-color-rgb), 0.4) 0%,
         rgba(var(--attacker-color-rgb), 0) 100%
       ),
-      rgba(25, 25, 25, 0.8);
+      rgba(0, 0, 0, 0.8);
   }
 
   &.observed {
     @extend .player-info;
-    background: linear-gradient(90deg, rgba(225, 181, 22, 0.3) 0%, rgba(225, 181, 22, 0) 100%),
-      rgba(25, 25, 25, 0.8);
+    background: linear-gradient(90deg, rgba(225, 181, 22, 0.3) 0%, rgba(0, 0, 0, 0) 100%),
+      rgba(0, 0, 0, 0.8);
   }
 
   &.dead {
     @extend .player-info;
-    background: rgba(25, 25, 25, 0.64);
+    background: rgba(0, 0, 0, 0.4);
   }
 
   &.minimal {
@@ -395,13 +397,6 @@
   width: 100%;
   position: relative;
   gap: 10px;
-}
-
-.currency-container {
-  display: inline-flex;
-  align-items: center;
-  gap: 2px;
-  position: relative;
 }
 
 .valorant-credits {

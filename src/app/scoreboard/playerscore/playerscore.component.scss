@@ -17,8 +17,8 @@
   &.defender {
     background: linear-gradient(
       90deg,
-      rgba(var(--defender-color-rgb), 0.5) 0%,
-      rgba(var(--defender-color-rgb), 0.5) 5%,
+      rgba(var(--defender-color-rgb), 0.25) 0%,
+      rgba(var(--defender-color-rgb), 0.25) 5%,
       rgba(var(--defender-color-rgb), 0) 35%
     );
   }
@@ -26,8 +26,8 @@
   &.attacker {
     background: linear-gradient(
       90deg,
-      rgba(var(--attacker-color-rgb), 0.5) 0%,
-      rgba(var(--attacker-color-rgb), 0.5) 5%,
+      rgba(var(--attacker-color-rgb), 0.35) 0%,
+      rgba(var(--attacker-color-rgb), 0.35) 5%,
       rgba(var(--attacker-color-rgb), 0) 35%
     );
   }
@@ -130,7 +130,7 @@
 
 .pip-ultimate {
   position: relative;
-  background-image: url(/assets/misc/ultimate-pip.svg);
+  background-image: url(/assets/misc/ultimate-pip-dark.svg);
   background-size: 100% 100%;
   width: 10px;
   height: 10px;
