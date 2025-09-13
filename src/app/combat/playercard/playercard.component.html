@@ -1,4 +1,8 @@
-<div class="player-container" [class]="side">
+<div class="player-container" [class]="
+        side + 
+        ' ' +
+        (player.isObserved ? 'observed' : '')
+      ">
   <!-- <div class="rank-icon-container" *ngIf="match.ranksEnabled && match.ranksByName[player.name]">
         <img class="rank-icon" [class]="side" src="{{assets}}/ranks/{{match.ranksByName[player.name]}}_Rank.webp" />
     </div> -->
