@@ -7,7 +7,7 @@
   overflow: hidden;
   &-right {
     @extend .topinfo-container;
-    left: 1320px;
+    left: 1345px;
   }
 }
 
@@ -19,24 +19,24 @@
   justify-content: center;
   position: relative;
   z-index: 2;
-  padding-left: 25px;
-  padding-right: 25px;
-  background: linear-gradient(
+  padding-left: 0px;
+  padding-right: 55px;
+  /*background: linear-gradient(
     90deg,
     rgba(15, 25, 35, 0.9) 0%,
     rgba(19, 31, 43, 0.7) 100%,
-  );
+  );*/
 
     &-flex {
       @extend .topinfo-pill;
       min-width: 250px;
-      background: linear-gradient(
+      /*background: linear-gradient(
       90deg,
       rgba(15, 25, 35, 0) 0%,
       rgba(15, 25, 35, 0.85) 25%,
       rgba(31.14, 37.75, 40.58, 0.85) 75%,
       rgba(31.14, 37.75, 40.58, 0) 100%
-    );
+    );*/
   }
 }
 
@@ -57,20 +57,19 @@
 
 .sponsor-container {
   position: absolute;
-  width: 240px;
-  height: 88px;
+  width: 230px;
+  height: 90px;
   top: 0;
-  left: 1680px;
-  background: rgba(0, 0, 0, 0.6);
-  border-radius: 0px 0px 6px 6px;
+  right: 0;
 }
 
 .sponsor-logo {
   position: absolute;
-  width: 156px;
-  height: 71px;
-  top: 11px;
-  left: 42px;
+  width: 220px;
+  height: 80px;
+  top: 0px;
+  right: 0px;
+  padding: 5px;
   object-fit: contain;
   transition: opacity 1s ease-in-out;
 }

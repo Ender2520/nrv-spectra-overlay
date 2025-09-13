@@ -10,15 +10,17 @@ import { TranslateModule } from "@ngx-translate/core";
   animations: [
     trigger("spike", [
       transition(":enter", [
-        style({ transform: "translateY(-150%)" }),
-        animate("0.3s ease-out", style({ transform: "translateY(0%)" })),
+        style({ opacity: 0, transform: "translateY(50%)" }),
+        animate("0.4s ease-out", style({ opacity: 1, transform: "translateY(0%)" })),
       ]),
-      transition(":leave", animate("0.3s", style({ transform: "translateY(-150%)" }))),
+      transition(":leave", animate("0.4s", style({ opacity: 0,  transform: "translateY(50%)" }))),
     ]),
   ],
   imports: [TranslateModule, NgIf, NgFor],
 })
 export class TopscoreComponent implements OnChanges {
+  public readonly assets: string = "../../../assets";
+
   @Input() match!: any;
   @Input() color!: "attacker" | "defender";
   @Input() side!: "left" | "right";

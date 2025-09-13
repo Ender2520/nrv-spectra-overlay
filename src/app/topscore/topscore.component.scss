@@ -1,15 +1,21 @@
+.topscore-image {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+}
+
 .topscore {
   position: absolute;
   display: flex;
-  width: 601px;
-  height: 140px;
+  width: 600px;
   left: 660px;
   top: 0px;
   align-items: center;
   justify-content: center;
-  margin-top: 10px;
+  //  margin-top: 5px;
 }
 
+/*
 .topscore-accent {
   display: flex;
   position: absolute;
@@ -19,7 +25,7 @@
   background-color: rgb(11,24,29);
   border-color: white;
   clip-path: polygon(0 0, 100% 0, 100% 0%, 68% 0%, 61.5% 100%, 61.5% 4%, 38.5% 4%, 38.5% 100%, 32% 0%, 0 0%);
-}
+}*/
 
 .topscore-container {
   display: inline-flex;
@@ -33,17 +39,18 @@
   display: inline-flex;
   align-items: flex-start;
   justify-content: center;
-  gap: 200px;
+  gap: 192px;
   position: relative;
   // box-shadow: -1px 1px 1px #0000001f; This currently creates a weird shadow between the two scoreblocks
 }
 
 .teamcard {
   display: flex;
-  width: 200px;
+  width: 210px;
   align-items: center;
   position: relative;
-  clip-path: polygon(8% 0%, 92% 0%, 100% 50%, 92% 100%, 8% 100%, 0% 50%);
+  //background-color: red;
+  //clip-path: polygon(8% 0%, 92% 0%, 100% 50%, 92% 100%, 8% 100%, 0% 50%);
 }
 
 .teamcard-border {
@@ -60,7 +67,7 @@
   flex: 1;
   align-self: stretch;
   flex-grow: 1;
-  background-color: #0f1923d9;
+  //background-color: #0f1923d9;
 }
 
 .teamimage-container {
@@ -74,54 +81,53 @@
 .team-image {
   position: relative;
   position: absolute;
-  height: 125%;
+  height: 65%;
   z-index: 0;
-  filter: brightness(0.75);
+  //filter: brightness(0.75);
   &-left {
     @extend .team-image;
-    left: -5px;
+    left: 5px;
   }
   &-right {
     @extend .team-image;
-    right: -5px;
+    right: 5px;
   }
 }
 
 .teamname-container {
   display: flex;
-  position: absolute;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  max-width: 85%;
+  width: 100%;
   overflow: hidden;
   z-index: 2;
+  //background-color: red;
 }
 
 .teamcode {
-  font-family: Unbounded, Helvetica;
+  font-family: "Montserrat", Helvetica;
   font-weight: 800;
   color: #ffffff;
   font-size: 20px;
   font-style: normal;
   text-align: center;
   text-transform: uppercase;
-  letter-spacing: -0.48px;
+  //letter-spacing: -0.48px;
   line-height: normal;
   white-space: nowrap;
-  text-shadow: 0px 2px 4px black;
+  //text-shadow: 0px 2px 4px black;
 }
 
 .teamseeding {
   font-family: "Montserrat", Helvetica;
-  font-weight: 800;
-  color: #ffffff;
+  font-weight: 600;
+  color: #dddddd;
   font-size: 14px;
   font-style: normal;
   text-align: center;
   line-height: normal;
   white-space: nowrap;
-  text-shadow: 0px 3px 3px black;
+  //text-shadow: 0px 3px 3px black;
 }
 
 .divider {
@@ -129,6 +135,7 @@
   align-self: stretch;
   width: 3.62px;
   z-index: 1;
+  /*
   &.defender {
     @extend .divider;
     background-color: var(--defender-color-secondary);
@@ -136,25 +143,27 @@
   &.attacker {
     @extend .divider;
     background-color: var(--attacker-color-secondary);
-  }
+  }*/
 }
 
 .scoreblock {
   display: flex;
   flex-direction: column;
-  width: 70px;
+  width: 75px;
   align-items: center;
   justify-content: center;
   gap: 12.07px;
   position: relative;
   align-self: stretch;
   border: 0px none;
+  //background-color: blue;
   &-left {
     @extend .scoreblock;
   }
   &-right {
     @extend .scoreblock;
   }
+  /*
   &.defender {
     @extend .scoreblock;
     background-color: var(--defender-color-tertiary);
@@ -162,17 +171,17 @@
   &.attacker {
     @extend .scoreblock;
     background-color: var(--attacker-color-tertiary);
-  }
+  }*/
 }
 
 .score-text {
   position: relative;
   width: fit-content;
-  text-shadow: 0px 2px 5px rgba(0, 0, 0, 0.12);
+  //text-shadow: 0px 2px 5px rgba(0, 0, 0, 0.12);
   font-family: "Montserrat", Helvetica;
-  font-weight: 700;
+  font-weight: 800;
   color: #ffffff;
-  font-size: 36px;
+  font-size: 40px;
   font-style: normal;
   text-align: center;
   line-height: normal;
@@ -187,23 +196,23 @@
   text-align: center;
   letter-spacing: 0.39px;
   line-height: normal;
-  top: 0;
+  top: 8px;
 }
 
 .spike-indicator {
-  width: 23%;
-  height: 120%;
-  top: -20%;
+  width: 15%;
   position: absolute;
   display: inline-flex;
   align-items: center;
+  justify-content: center;
   position: relative;
-  top: -48px
+  top: -40px;
+  //background-color: purple;
 }
 
 .spike-icon {
   position: relative;
-  width: 64px;
+  width: 80px;
 }
 
 .mapwin-line {
@@ -211,7 +220,7 @@
   justify-content: center;
   gap: 10px;
   position: absolute;
-  top: 115%;
+  top: 120%;
   &-left {
     @extend .mapwin-line;
     right: 5%;
@@ -234,19 +243,4 @@
     @extend .mapwin-pip;
     background-color: #ffffff;
   }
-}
-
-.timer-rounder {
-  position: absolute;
-  top: -4px;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 23%;
-  height: 50%;
-  border-bottom-left-radius: 6px;
-  border-bottom-right-radius: 6px;
-  border-bottom: 3px solid #0f1923;
-  border-left: 3px solid #0f1923;
-  border-right: 3px solid #0f1923;
-  z-index: -10;
 }

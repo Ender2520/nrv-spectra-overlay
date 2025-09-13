@@ -1,6 +1,12 @@
+<img 
+  class="topscore-image" 
+  src="{{ assets }}/misc/VCT2025_Champs_Remake_1.png"
+  
+  />
+
 <div class="topscore" [class]="side">
   <div class="topscore-container">
-    <div class="topscore-accent"></div>
+    <!--<div class="topscore-accent"></div>-->
     <div class="scoreboard">
       <div class="teamcard">
         <div class="teamcard-border">
@@ -15,7 +21,7 @@
               </div>
             </div>
           </div>
-          <div class="divider" [class]="match.teams[0].isAttacking ? 'attacker' : 'defender'"></div>
+          <!--<div class="divider" [class]="match.teams[0].isAttacking ? 'attacker' : 'defender'"></div>-->
           <div
             class="scoreblock-left"
             [class]="match.teams[0].isAttacking ? 'attacker' : 'defender'"
