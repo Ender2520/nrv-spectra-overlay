@@ -1,5 +1,5 @@
 export class Config {
-  serverEndpoint = "http://localhost:5200";
+  serverEndpoint = "https://na.valospectra.com:5200";
   redirectUrl = "https://valospectra.com";
   sponsorImageUrls: string[] = [];
   sponsorImageRotateSpeed = 5000; // in milliseconds
@@ -9,10 +9,12 @@ export class Config {
 
   attackerColorPrimary = "#b82e3c";
   attackerColorSecondary = "#ff4557";
+  attackerColorTertiary = "#7c303c";
   attackerColorShieldCurrency = "#ff838f";
 
   defenderColorPrimary = "#25ac79";
   defenderColorSecondary = "#61eab6";
+  defenderColorTertiary = "#215e45";
   defenderColorShieldCurrency = "#61eab6";
 
   public constructor(init?: Partial<Config>) {

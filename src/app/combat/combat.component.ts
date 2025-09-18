@@ -11,10 +11,10 @@ import {
   templateUrl: "./combat.component.html",
   styleUrls: ["./combat.component.scss"],
   imports: [
-    NgIf,
+    //NgIf,
     NgFor,
     InhouseTrackerPlayercardComponent,
-    InhouseTrackerPlayercardMinimalComponent,
+    //InhouseTrackerPlayercardMinimalComponent,
   ],
 })
 export class CombatComponent {

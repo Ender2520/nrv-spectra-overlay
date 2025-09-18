@@ -1,28 +1,23 @@
 .container {
   width: 100%;
   display: inline-flex;
-  flex-direction: column;
+  flex-direction: row;
   align-items: center;
   justify-content: center;
   gap: 2px;
 }
 
-.regular-container {
+.ability-container {
   display: inline-flex;
   flex-direction: row;
   flex: auto;
   align-items: center;
   justify-content: center;
-  gap: 15px;
-
-  &.right {
-    @extend .regular-container;
-    transform: rotateY(180deg);
-  }
+  gap: 20px;
 }
 
 .ability-icon {
-  width: 22px;
+  width: 24px;
 
   &.available {
     @extend .ability-icon;
@@ -31,20 +26,6 @@
 
   &.unavailable {
     @extend .ability-icon;
-    filter: brightness(0.35);
-  }
-}
-
-.ultimate-icon {
-  width: 30px;
-
-  &.available {
-    @extend .ultimate-icon;
-    filter: brightness(1);
-  }
-
-  &.unavailable {
-    @extend .ultimate-icon;
-    filter: brightness(0.35);
+    filter: brightness(0.4);
   }
 }

@@ -2,7 +2,7 @@ import { trigger, transition, style, animate } from "@angular/animations";
 import { Component, Input, inject } from "@angular/core";
 import { Config } from "../../shared/config";
 import { AgentNameService } from "../../services/agentName.service";
-import { NgIf, NgFor } from "@angular/common";
+import { NgIf, NgFor, NgClass } from "@angular/common";
 import { AbilitiesComponent } from "../../abilities/abilities.component";
 import { ShieldIconComponent } from "./shield-icon/shield-icon.component";
 import { TranslateModule } from "@ngx-translate/core";
@@ -52,7 +52,7 @@ const componentAnimations = [
   templateUrl: "./playercard.component.html",
   styleUrls: ["./playercard.component.scss"],
   animations: componentAnimations,
-  imports: [NgIf, AbilitiesComponent, ShieldIconComponent, NgFor, NameoverridePipe],
+  imports: [NgIf, AbilitiesComponent, ShieldIconComponent, NgFor, NgClass, NameoverridePipe],
 })
 export class InhouseTrackerPlayercardComponent {
   private config = inject(Config);
@@ -97,8 +97,13 @@ export class InhouseTrackerPlayercardComponent {
     return AgentNameService.getAgentName(agent);
   }
 
+  getAvailability(availablility: number): string {
+    availablility = this.clamp(availablility, 0, 1);
+    return availablility == 1 ? "available" : "unavailable";
+  }
+
   clamp(value: number, min: number, max: number): number {
-    return Math.max(min, Math.min(max, value));
+    return Math.min(Math.max(value, min), max);
   }
 
   getOverrideNames(): Map<string, string> {
@@ -115,6 +120,6 @@ export class InhouseTrackerPlayercardComponent {
   templateUrl: "./playercard-minimal.component.html",
   styleUrls: ["./playercard.component.scss"],
   animations: componentAnimations,
-  imports: [TranslateModule, NgIf, NameoverridePipe],
+  imports: [TranslateModule],
 })
 export class InhouseTrackerPlayercardMinimalComponent extends InhouseTrackerPlayercardComponent {}

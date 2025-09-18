@@ -8,6 +8,7 @@ import { Config } from "./shared/config";
   // eslint-disable-next-line @angular-eslint/prefer-standalone
   standalone: false,
 })
+
 export class AppComponent implements OnInit {
   private config = inject(Config);
 
@@ -45,6 +46,22 @@ export class AppComponent implements OnInit {
     document.documentElement.style.setProperty(
       "--attacker-color-secondary-rgb",
       this.hexToRgb(this.config.attackerColorSecondary).join(", "),
+    );
+    document.documentElement.style.setProperty(
+      "--attacker-color-tertiary",
+      this.config.attackerColorTertiary,
+    );
+    document.documentElement.style.setProperty(
+      "--attacker-color-tertiary-rgb",
+      this.hexToRgb(this.config.attackerColorTertiary).join(", "),
+    );
+    document.documentElement.style.setProperty(
+      "--defender-color-tertiary",
+      this.config.defenderColorTertiary,
+    );
+    document.documentElement.style.setProperty(
+      "--defender-color-tertiary-rgb",
+      this.hexToRgb(this.config.defenderColorTertiary).join(", "),
     );
     document.documentElement.style.setProperty(
       "--defender-color-shield-currency",

@@ -1,12 +1,18 @@
-<div class="topscore">
-  <div class="timer-rounder"></div>
+<img 
+  class="topscore-image" 
+  src="{{ assets }}/misc/VCT2025_Champs_Remake_1.png"
+  
+  />
+
+<div class="topscore" [class]="side">
   <div class="topscore-container">
+    <!--<div class="topscore-accent"></div>-->
     <div class="scoreboard">
       <div class="teamcard">
         <div class="teamcard-border">
           <div class="teaminfo-container">
             <div class="teamimage-container">
-              <img class="team-image" src="{{ match.teams[0].teamUrl }}" />
+              <img class="team-image-left" src="{{ match.teams[0].teamUrl }}" />
             </div>
             <div class="teamname-container">
               <div class="teamcode">{{ match.teams[0].teamTricode }}</div>
@@ -15,7 +21,7 @@
               </div>
             </div>
           </div>
-          <div class="divider" [class]="match.teams[0].isAttacking ? 'attacker' : 'defender'"></div>
+          <!--<div class="divider" [class]="match.teams[0].isAttacking ? 'attacker' : 'defender'"></div>-->
           <div
             class="scoreblock-left"
             [class]="match.teams[0].isAttacking ? 'attacker' : 'defender'"
@@ -46,7 +52,8 @@
             <div class="score-text">{{ match.teams[1].roundsWon }}</div>
           </div>
           <div class="divider" [class]="match.teams[1].isAttacking ? 'attacker' : 'defender'"></div>
-          <div class="teaminfo-container">
+          <div class="teaminfo-container"
+          >
             <div class="teamname-container">
               <div class="teamcode">{{ match.teams[1].teamTricode }}</div>
               <div class="teamseeding">
@@ -54,7 +61,7 @@
               </div>
             </div>
             <div class="teamimage-container">
-              <img class="team-image" src="{{ match.teams[1].teamUrl }}" />
+              <img class="team-image-right" src="{{ match.teams[1].teamUrl }}" />
             </div>
           </div>
         </div>

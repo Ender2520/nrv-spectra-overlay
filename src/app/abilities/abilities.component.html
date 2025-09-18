@@ -1,5 +1,5 @@
 <div
-  class="regular-container"
+  class="ability-container"
   [class]="side"
   *ngIf="player.isAlive && player.auxiliaryAvailable.abilities && !hideAuxiliary"
   [@deathAnimation]="player.isAlive"
@@ -22,7 +22,7 @@
 </div>
 
 <div
-  class="regular-container"
+  class="ability-container"
   [class]="side"
   *ngIf="
     player.agentInternal === 'Smonk' &&
