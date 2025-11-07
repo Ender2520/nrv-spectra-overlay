@@ -340,7 +340,7 @@
     background:
       linear-gradient(
         90deg,
-        rgba(var(--defender-color-rgb), 0.25) 0%,
+        rgba(var(--defender-color-rgb), 0.35) 0%,
         rgba(var(--defender-color-rgb), 0) 100%
       ),
       rgba(0, 0, 0, 0.8);
@@ -351,7 +351,7 @@
     background:
       linear-gradient(
         90deg,
-        rgba(var(--attacker-color-rgb), 0.4) 0%,
+        rgba(var(--attacker-color-rgb), 0.5) 0%,
         rgba(var(--attacker-color-rgb), 0) 100%
       ),
       rgba(0, 0, 0, 0.8);
@@ -359,7 +359,7 @@
 
   &.observed {
     @extend .player-info;
-    background: linear-gradient(90deg, rgba(224, 194, 83, 0.3) 0%, rgba(0, 0, 0, 0) 100%),
+    background: linear-gradient(90deg, rgba(255, 226, 121, 0.5) 0%, rgba(0, 0, 0, 0) 100%),
       rgba(0, 0, 0, 0.8);
   }
 
@@ -463,6 +463,10 @@
   font-size: 18px;
 }
 
+app-abilities {
+  height: 20px;
+}
+
 app-shield-icon {
   position: relative;
   width: 20px;
@@ -524,8 +528,4 @@ app-shield-icon {
     @extend .health-bar;
     background-color: var(--defender-color-shield-currency);
   }
-}
-
-.ability-icon {
-  padding-right: 22px;
 }
